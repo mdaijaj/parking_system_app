@@ -1,0 +1,9 @@
+/* sidebar.css */
+.activeClicked .nav-link {
+  background-color: #007bff; /* Change to your desired color */
+}
+
+/* Optional: Hover effect */
+.nav-link:hover {
+  background-color: #0056b3; /* Change to your desired hover color */
+}
