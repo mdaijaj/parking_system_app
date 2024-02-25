@@ -24,7 +24,8 @@ var parkingSpaceSchema = new Schema({
         type: String,
     },
     agent_name: {
-        type: String,
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Agent',
     },
     description: {
         type: String,

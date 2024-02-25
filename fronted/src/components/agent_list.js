@@ -57,7 +57,7 @@ const AgentList = () => {
     }
 
     const updateAchievementDetails = async (itemId) => {
-        navigate(`/contact_person_details/:${itemId}`)
+        navigate(`/update_user_details/:${itemId}`)
     }
 
 
@@ -151,7 +151,7 @@ const AgentList = () => {
                                             <td>{item.email}</td>
                                             <td>{item.mobile}</td>
                                             <td >
-                                                <Link className="btn btn-outline-primary mr-2" style={{ margin: "5px" }} onClick={() => updateAchievementDetails(item._id)} to={`/contact_person_details/${item._id}`}><i class="fas fa-user-edit"></i>
+                                                <Link className="btn btn-outline-primary mr-2" style={{ margin: "5px" }} onClick={() => updateAchievementDetails(item._id)} to={`/update_user_details/${item._id}`}><i class="fas fa-user-edit"></i>
                                                     <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z" />
                                                 </Link>
                                                 <Link className="btn btn-danger mr-2" style={{ margin: "5px" }} onClick={() => deleteAchievement(item._id)}><i class="fas fa-trash"></i>
@@ -204,7 +204,7 @@ const AgentList = () => {
                 aria-describedby="modal-modal-description"
             >
                 <Box sx={style}>
-                    <Typography id="modal-modal-title" variant="h6" component="h2" style={{ backgroundColor: "blue" }}>Achievement Details</Typography>
+                    <Typography id="modal-modal-title" variant="h6" component="h2" style={{ backgroundColor: "blue" }}>Parking Space Details</Typography>
                     <Typography id="modal-modal-description">
                         {`
                         Id       :  ${achievedetail._id} 

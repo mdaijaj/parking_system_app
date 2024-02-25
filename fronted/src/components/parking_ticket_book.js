@@ -32,7 +32,7 @@ const ParkingTicketBook=()=>{
     }
 
     let agent_data=localStorage.getItem("user");
-    let agent_id
+    let agent_id;
     if(agent_data){
         agent_id=JSON.parse(agent_data)._id
     }

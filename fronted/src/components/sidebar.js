@@ -27,11 +27,11 @@ const Sidebar = ({isLogin}) => {
   }, [isLogin])
   
   return (
-    <div style={{ display: 'flex', height: '100vh', overflow: 'scroll initial' }}>
+    <div style={{ display: 'flex', height: '150vh', overflow: 'scroll initial' }}>
       <CDBSidebar textColor="#fff" backgroundColor="#333">
         <CDBSidebarHeader prefix={<i className="fa fa-bars fa-large"></i>}>
           <a href="/" className="text-decoration-none" style={{ color: 'inherit' }}>
-          X CORPORATE
+          Car Online Parking
           </a>
         </CDBSidebarHeader>
 

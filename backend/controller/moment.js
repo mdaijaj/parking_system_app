@@ -14,7 +14,16 @@ exports.createInboarding = async (req, res) => {
     description,
     status
   } = req.body;
+
+
   try {
+
+    if(!number_of_floors || !each_floor){
+      return res.status(500).send({
+        message: "It should not emply value."
+      });
+    }
+
     const ticketData = await ParkingSpaceSchema.create({
       number_of_floors,
       each_floor,

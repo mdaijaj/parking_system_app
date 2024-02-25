@@ -9,12 +9,12 @@ import Login from './login'
 import ParkingTicketBook from './parking_ticket_book'
 import AgentList from './agent_list';
 import ParkingSpaceService from './parking_service';
-import OnboardingDetails from './onboarding_update'
+import OnboardingDetails from './onboarding_update';
+import UserDetails from './update_user';
 
 
 
 const Routing=()=>{
-
 
 
   return(
@@ -27,7 +27,8 @@ const Routing=()=>{
           <Route path="/parking_ticket" element={<ParkingTicketBook/>} />
           <Route path="/parking_list" element={<Userdata/>} />   
           <Route path="/agent_list" element={<AgentList/>} />          
-          <Route path="/new_onboarding" element={<ParkingSpaceService/>} />     
+          <Route path="/new_onboarding" element={<ParkingSpaceService/>} />    
+          <Route exact path="/update_user_details/:id" element={<UserDetails/>} />   
           <Route exact path="/onboarding_details/:id" element={<OnboardingDetails/>} />  
           <Route path="/*" element={<Errorpage/>} />
         </Routes>

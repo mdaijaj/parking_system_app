@@ -58,6 +58,10 @@ var SlotbookingSchema = new Schema({
         type: Number,
         default: 0
     },
+    agent_id: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Agent',
+    },
     status: {
         type: Boolean,
         default: true 

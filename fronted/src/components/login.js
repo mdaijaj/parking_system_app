@@ -61,7 +61,7 @@ const Login = () => {
 
         if (result.status === 200 && result) {
             toast.success('new candidate add is successfully', { autoClose: 1500 })
-            navigate('/parkingSpaceList')
+            navigate('/agent_list')
         }
         else {
             toast.info('Invalid user details', { autoClose: 1500 })

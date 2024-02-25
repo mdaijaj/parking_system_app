@@ -24,7 +24,6 @@ const App = () => {
 
   return (
     <>
-    {console.log(open)}
       <div className="App">
       <Navbar isLogin={open}/>
       {

@@ -18,7 +18,7 @@ const Navbar = ({}) => {
             <nav className="navbar navbar-expand-lg navbar-dark bg-secondary">
                 <div className="container-fluid">
                     <NavLink className="navbar-brand" to="#">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPV1diKLJC3pxU0cMoaNQ3PyfPOrBM1ONM3w&usqp=CAU" style={{ borderRadius: "50%" }} width="100" height="100" className="d-inline-block align-top" alt="image path not found" />
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCgT0ADbemNrtyCXjzvEaR8FyHsQQLV7uDmg&usqp=CAU" style={{ borderRadius: "50%" }} width="100" height="100" className="d-inline-block align-top" alt="image path not found" />
                     </NavLink>
 
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
@@ -42,6 +42,8 @@ const Navbar = ({}) => {
                             <>
                                 <button onClick={handleLogout} className='btn btn-dark'>Logout</button>
                                 <h4 style={{ padding: "40px" }}>{`${JSON.parse(localStorage.getItem('user'))?.first_name} ${JSON.parse(localStorage.getItem('user'))?.last_name}`}</h4>
+                                {/* <h4 style={{ padding: "40px" }}>{`${localStorage.getItem('user')}? ${JSON.parse(localStorage.getItem('user')).first_name} ${JSON.parse(localStorage.getItem('user'))?.last_name}`}</h4> */}
+
                             </>
                         }
                     </div>

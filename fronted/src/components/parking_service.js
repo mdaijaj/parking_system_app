@@ -31,13 +31,27 @@ const ParkingSpaceService = () => {
       list: [{ small: '',medium: '', extraLarge: '', large: '' }]
     }
   });
+
+  console.log("handleSubmit.......", handleSubmit)
   const { fields, append, remove } = useFieldArray({
     control,
     name: "list"
   });
 
+
+
+
   const onSave = data => {
-    console.log("aijaj", data)
+    data.list?.map((item)=> {
+      let sum= parseInt(item.small) + parseInt(item.medium) +parseInt(item.large) +parseInt(item.extraLarge)
+      console.log(sum)
+      console.log("each_floor", agentdata.each_floor)
+      if (sum!=agentdata.each_floor){
+        toast.info(`It should be equal to each floor slot size!`, { autoClose: 1500 });
+      }else {
+        toast.success(`Each floor car size allocated successfully!`, { autoClose: 1500 });
+      }
+    })
     setData({ ...data });
   }
 
