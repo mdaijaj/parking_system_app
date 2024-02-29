@@ -32,7 +32,7 @@ console.log("req.body", req.body)
     let x_large_count;
     const bookingData= await ParkingSlotBooking.find({agent_id: agent_id})
     console.log("agent_id", agent_id)
-    const agend_Data= await ParkingSpaceSchema.findOne({agent_id: agent_id}).populate()
+    const agend_Data= await ParkingSpaceSchema.findOne({agent_name: agent_id}).populate()
     console.log("agend_Data", agend_Data)
     let lastEntry;
     if(bookingData.length>0){
@@ -80,7 +80,7 @@ console.log("req.body", req.body)
       else if(car_size=="large"){
         large_count=1
       }   
-      else if(car_size=="extralarge"){
+      else if(car_size=="extra_large"){
         x_large_count=1
       }
     }
